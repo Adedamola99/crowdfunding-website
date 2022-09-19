@@ -2,12 +2,48 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive;
 }
+
+:root {
+    --fs-h1: 1.76rem;
+    --fs-h2: 1.25rem;
+    --fs-p: 1rem;
+    --fs-xl: 2rem;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 
 body {
     background-color: #FAFAFA;
     position: relative;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-p);
+}
+
+.backers {
+    font-size: var(--fs-xl);
+    font-weight: 900;
+}
+
+p {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-light);
+    color: var(--clr-Dark-gray);
+    line-height: 1.7;
 }
 
 .hamburger {
@@ -24,7 +60,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 438px;
+    min-height: 400px;
     position: relative;
     z-index: 9;
 }
@@ -49,12 +85,12 @@ li a {
     text-decoration: none;
     color: white;
     font-weight: 700;
+    font-size: 1rem;
 }
 
 .hero {
-    width: 100%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 730px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -85,6 +121,7 @@ li a {
 
 .motto {
     color: #AEAEAE;
+    text-align: center;
 }
 
 .action {
@@ -96,12 +133,13 @@ li a {
 }
 
 .supportBtn {
-    background-color: #3CB4AB;
+    background-color: #70C0B6;
     padding: 1em;
-    border-radius: 1.5em;
+    border-radius: 2em;
     color: white;
     cursor: pointer;
     font-weight: 800;
+    font-size: unset;
 }
 
 .supportBtn:hover, .rewardBtn:hover, .continue-btn:hover  {
@@ -139,20 +177,20 @@ li a {
 .content2 {
     background-color: white;
     border-radius: 1em;
-    padding: 1em;
+    padding: 2em;
 }
 
 .top {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 30px;
     margin-bottom: 1em;
 }
 
 .backed-number {
     border-right: 3px solid #E9E9E9;
     border-left: 3px solid #E9E9E9;
-    padding: 0 2em;
+    padding: 0 3em;
     display: flex;
     flex-direction: column;
 }
@@ -221,12 +259,14 @@ li a {
 
 .rewardBtn-unset {
     background-color: #CBCBCB;
-    padding: 1em 1.5em;
+    padding:  16px 14px;
     color: white;
-    border-radius: 1.5em;
+    border-radius: 2em;
     font-weight: 900;
     cursor: default;
+    border: none;
 }
+
 .left-text {
     margin-left: 6px;
 }
@@ -252,11 +292,12 @@ li a {
 
 .rewardBtn {
     background-color: #70C0B6;
-    padding: 1em 1.5em;
+    padding: 16px 14px;
     color: white;
-    border-radius: 1.5em;
+    border-radius: 2em;
     font-weight: 900;
     cursor: pointer;
+    border: none;
 }
 
 .overlay {
@@ -275,17 +316,19 @@ li a {
 
 
 .back-project-section {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: white;
-    padding: 2em;
+    gap: 10px;
     border-radius: 1em;
     position: absolute;
-    margin-top: -25em;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    padding: 31px 22.5px 5px;
+    margin: 0 auto;
+    background-color: white;
+    max-width: 750px;
 }
 
 
@@ -297,7 +340,7 @@ li a {
 .backing-items{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     border: 3px solid #E2E2E2;
     border-radius: .5em;
 }
@@ -325,11 +368,9 @@ li a {
     padding: 1em 2em;
 }
 
-.check-box1 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 1em 2em;
+.no-reward {
+    justify-content: left;
+    gap: 10px;
 }
 
 .check-box-left-bar {
@@ -344,9 +385,12 @@ li a {
     align-items: center;
 }
 
-.check-text-pledge {
-    margin-left: 1em;
+.down {
+    margin-left: 2.5em;
+    margin-bottom: 0.8em;
+    display: none;
 }
+
 
 
 .check-text:hover {
@@ -377,7 +421,7 @@ li a {
 .support-text {
     margin-left: 3em;
     color: #888888;
-    margin-bottom: 1.4em;
+    margin-bottom: .8em;
     width: 88%;
 }
 
@@ -406,11 +450,6 @@ li a {
     gap: 20px;
 }
 
-p {
-    font-size: 1em;
-}
-
-
 .number {
     border: 1px solid #3CB4AB;
     padding: .6em 1.4em .6em 1em;
@@ -422,11 +461,17 @@ p {
     padding-right: .5em;
 }
 
+.pledge-name {
+    display: flex;
+    gap: 10px;
+}
+
 .continue-btn {
     background-color: #70C0B6;
     color: white;
     padding: .8em 1em;
     border-radius: 1.2em;
+    border: none;
 }
 
 .thanks-icon {
@@ -480,6 +525,13 @@ p {
 } 
 
 @media only screen and (max-width: 880px) {
+    :root {
+        --fs-h1: 1.28rem;
+        --fs-h2: 1.16rem;
+        --fs-p: .91rem;
+        --fs-xl: 1.5rem;
+    }
+
     .header{
         background-image: url("./images/image-hero-mobile.jpg");
         background-position: center;
@@ -542,7 +594,7 @@ p {
 
     nav {
         display: block;
-        padding: 1em 3em;
+        padding: 1em 1em;
     }
 
     .primary-nav {
@@ -564,11 +616,38 @@ p {
     .check-box1 {
         padding: 1em 1em;
     }
+
+    .up {
+        display: none;
+    }
+
+    .down {
+        display: flex;
+    }
+
 }
 
+
 @media only screen and (max-width: 520px) {
+    :root {
+        --fs-h1: 1rem;
+        --fs-h2: .9rem;
+        --fs-p: .7rem;
+        --fs-xl: 1.3rem;
+    }
+
+
     .bookmarkBtn {
         display: none;
+    }
+
+    .supportBtn {
+        flex: 2;
+        text-align: center;
+    }
+
+    main {
+        padding: 0 24px;
     }
 
     .top {
@@ -582,10 +661,7 @@ p {
 
     .action {
         padding: 1em 0em;
-    }
-
-    .title {
-        font-size: 1em;
+        gap: 15px;
     }
 
     .thank-you-alert {
@@ -625,16 +701,12 @@ p {
     }
 
     .check-box-right-bar {
-        margin-left: 8px;
+        margin-left: 2em;
         margin-top: 0.5em;
     }
 
-    .check-text-pledge {
-        font-size: 1em;
-    }
-
     .check-box {
-        padding: 1em 1em;
+        padding: 0.5em 0.5em;
     }
 
     .support-text {
@@ -657,13 +729,54 @@ p {
     }
 
     .number-box {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .support-text {
         width: 80%;
     }
+
+    .no-reward {
+        display: flex;
+    }
+
+    .pledge-name {
+        display: block;
+    }
+
+    .rewardBtn-unset, .rewardBtn {
+        font-size: .7rem;
+    }
+
 }
+
+@media only screen and (max-width: 375px) {
+    :root {
+        --fs-xl: 1.31rem;
+        --fs-h1: 1.185rem;
+        --fs-h2: .925rem;
+        --fs-p: .81rem;
+        --fs-a: .83rem;
+    }
+
+    .supportBtn {
+        padding: .5em;
+        font-size: .7rem;
+    }
+
+    .back-project-section {
+        margin: 0px 18px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .back-project-section {
+        margin: 0px 11px;
+    }
+}
+
+
+
 
 
 

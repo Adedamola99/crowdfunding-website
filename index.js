@@ -52,9 +52,11 @@ bookmarkBoxBtn.addEventListener("click", () => {
     if (iconColor) {
         bookmarkIcon.src = "./images/icon-bookmark-green.svg" 
         iconColor = false;
+        bookmarkBtn.textContent = "Bookmarked"
     } else {
         bookmarkIcon.src = "./images/icon-bookmark.svg"
-        iconColor = true; 
+        iconColor = true;
+        bookmarkBtn.textContent = "Bookmark" 
     }
 });
 
@@ -81,7 +83,7 @@ continueBtns.forEach((continueBtn) => {
 
 rewardBtns.forEach((rewardBtn) => {
     rewardBtn.addEventListener("click", () => {
-        thanksOverlay.classList.add("open-thanks-overlay")
+        supportSection.classList.add("open-modal")
     })
 })
 
