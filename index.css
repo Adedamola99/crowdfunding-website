@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: 'Commissioner', monospace;
 }
 
 :root {
@@ -40,14 +40,17 @@ h3 {
 }
 
 p {
-    font-size: var(--fs-p);
-    font-weight: var(--fw-light);
-    color: var(--clr-Dark-gray);
+    color: hsl(0, 0%, 48%);
     line-height: 1.7;
 }
 
 .hamburger {
     display: none;
+}
+
+.hamburger, .crowdfund-logo, .close-menu {
+    max-width: 100%;
+    height: auto;
 }
 
 .close-menu {
@@ -88,6 +91,10 @@ li a {
     font-size: 1rem;
 }
 
+main {
+    padding: 0;
+}
+
 .hero {
     margin: 0 auto;
     max-width: 730px;
@@ -95,7 +102,6 @@ li a {
     flex-direction: column;
     gap: 20px;
     margin-top: -7em;
-    z-index: 99;
     position: relative;
     z-index: 10;
 }
@@ -109,6 +115,7 @@ li a {
     gap: 15px;
     border-radius: 1em;
     margin-top: 1em;
+    border: solid 1px hsl(0, 0%, 91%);
 }
 
 .mastercraft-logo{
@@ -120,7 +127,6 @@ li a {
 }
 
 .motto {
-    color: #AEAEAE;
     text-align: center;
 }
 
@@ -178,6 +184,7 @@ li a {
     background-color: white;
     border-radius: 1em;
     padding: 2em;
+    border: solid 1px hsl(0, 0%, 91%);
 }
 
 .top {
@@ -222,14 +229,11 @@ li a {
 .content3 {
     background-color: white;
     border-radius: 1em;
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.words, .item-details {
-    color: #AEAEAE;
+    border: solid 1px hsl(0, 0%, 91%);
 }
 
 .inner-content {
@@ -242,7 +246,7 @@ li a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 3px solid #E2E2E2;
+    border: solid 1px hsl(0, 0%, 91%);
     border-radius: 1em;
     padding: 1em;
 }
@@ -539,9 +543,12 @@ li a {
         background-size: cover;
     }
 
+    main {
+        padding: 0 24px;
+    }
+
     .hamburger{
         display: block;
-        width: 27px;
         cursor: pointer;
     }
 
@@ -601,9 +608,6 @@ li a {
         display: block;
     }
 
-    .hero {
-        width: 85%;
-    }
 
     .mastercraft-title {
         text-align: center;
@@ -632,7 +636,7 @@ li a {
     :root {
         --fs-h1: 1rem;
         --fs-h2: .9rem;
-        --fs-p: .7rem;
+        --fs-p: .9rem;
         --fs-xl: 1.3rem;
     }
 
@@ -644,10 +648,6 @@ li a {
     .supportBtn {
         flex: 2;
         text-align: center;
-    }
-
-    main {
-        padding: 0 24px;
     }
 
     .top {
@@ -686,6 +686,7 @@ li a {
 
     .pledge-amount {
         margin-top: 0.5em;
+        font-size: smaller;
     }
 
     .rewardBtn {
@@ -760,7 +761,7 @@ li a {
     }
 
     .supportBtn {
-        padding: .5em;
+        padding: 1.2em;
         font-size: .7rem;
     }
 
