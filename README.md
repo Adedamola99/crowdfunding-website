@@ -110,13 +110,6 @@ In future projects, I want to be able to combine my HTML and CSS knowledge with 
 
 - [Figma.com](https://figma.com) - This helped me to get the best judgement for font-size, margin, padding, width and border-radius. I really liked this pattern and will use it going forward.
 
-## Author
-
-- Github - [Nwali Joseph](https://github.com/Source-Web)
-- Frontend Mentor - [@Source-Web](https://www.frontendmentor.io/profile/Source-Web)
-- Facebook - [@joseph.nwali.5249](https://www.facebook.com/joseph.nwali.5249)
-
-
 
 ## Acknowledgments
 
