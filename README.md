@@ -65,5 +65,3 @@ In future projects, I want to be able to combine my HTML and CSS knowledge with 
 ## Acknowledgments
 
 I want to thank front-end Mentor for this design challenge. My front-end journey has been a smooth one with you.
-
-I also appreciate Github pages for allowing me host this challange for free.
